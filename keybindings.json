@@ -1,3 +1,4 @@
+// Place your key bindings in this file to override the defaultsauto[]
 [
     {
         "key": "ctrl+b",
@@ -227,7 +228,7 @@
         "when": "textInputFocus"
     },
     {
-        "key": "alt+u",
+        "key": "shift+h",
         "command": "cursorHome",
         "when": "textInputFocus"
     },
@@ -237,7 +238,7 @@
         "when": "editorTextFocus && editorLangId == 'c' || editorTextFocus && editorLangId == 'cpp' || editorTextFocus && editorLangId == 'cuda-cpp'"
     },
     {
-        "key": "alt+o",
+        "key": "shift+l",
         "command": "cursorEnd",
         "when": "textInputFocus"
     },
@@ -413,5 +414,15 @@
     {
         "key": "ctrl+f4",
         "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "end",
+        "command": "-cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "home",
+        "command": "-cursorHome",
+        "when": "textInputFocus"
     }
 ]
