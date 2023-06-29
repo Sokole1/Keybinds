@@ -1,0 +1,92 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.languageServer": "Default",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["k", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+          {
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.splitEditor"]
+          },
+          {
+            "before": ["<leader>", "h"],
+            "commands": ["workbench.action.focusPreviousGroup"]
+          },
+          {
+            "before": ["<leader>", "l"],
+            "commands": ["workbench.action.focusNextGroup"]
+          },
+          {
+            "before": ["<leader>", "q"],
+            "commands": ["workbench.action.closeOtherEditors"]
+          },                 {
+            "before": ["<leader>", "o"],
+            "commands": ["workbench.action.quickOpen"]
+          },       
+          {
+            "before": ["<leader>", "x"],
+            "commands": ["workbench.action.closeActiveEditor"]
+          },       
+          {
+           "before": ["leader", "s"],
+            "commands": [
+                "workbench.action.files.save",
+            ]
+        },
+        {
+          "before": ["<leader>", "t"],
+          "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+          "before": ["<leader>", "f"],
+          "after": ["<leader>", "<leader>", " ", "b", "d", "w"]
+        },
+        {
+          "before": ["<leader>", "j"],
+          "commands": ["workbench.action.navigateBack"]
+        },
+        {
+          "before": ["<leader>", "k"],
+          "commands": ["workbench.action.navigateForward"]
+        },
+        {
+          "before": ["<leader>", "p"],
+          "commands": ["workbench.action.showCommands"]
+        },
+      ],
+      "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "p",
+            ],
+            "after": [
+                "p",
+                "g",
+                "v",
+                "y"
+            ]
+        }
+    ],
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.easymotion": true,
+    "vim.leader": " ",
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vim.smartRelativeLine": true,
+    "editor.lineNumbers": "relative",
+}
