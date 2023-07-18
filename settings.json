@@ -16,6 +16,7 @@
   ],
   "vim.handleKeys": {
     "<C-c>": false,
+    "<C-h>": false,
     "<C-v>": false,
     "<C-a>": false,
   },
