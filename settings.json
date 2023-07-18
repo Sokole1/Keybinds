@@ -29,7 +29,7 @@
       "commands": [":bnext"]
     },
     {
-      "before": ["<leader>", "s"],
+      "before": ["<leader>", "w"],
       "commands": ["workbench.action.splitEditor"]
     },
     {
@@ -53,7 +53,7 @@
       "commands": ["workbench.action.closeActiveEditor"]
     },
     {
-      "before": ["leader", "w"],
+      "before": ["leader", "s"],
       "commands": ["workbench.action.files.save"]
     },
     {
