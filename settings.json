@@ -50,7 +50,7 @@
       "commands": ["workbench.action.quickOpen"]
     },
     {
-      "before": ["<leader>", "c"],
+      "before": ["<leader>", "x"],
       "commands": ["workbench.action.closeActiveEditor"]
     },
     {
@@ -63,7 +63,11 @@
     },
     {
       "before": ["<leader>", ";"],
-      "after": ["<leader>", "<leader>", " ", "b", "d", "w"]
+      "after": ["<leader>", "<leader>", "<leader>", "b", "d", "w"]
+    },
+    {
+      "before": ["<leader>", "'"],
+      "after": ["<leader>", "<leader>", "s"]
     },
     {
       "before": ["ctrl+d"],
@@ -97,6 +101,54 @@
       "before": ["<leader>", "d"],
       "commands": ["editor.action.showHover"]
     },
+    {
+      "before": ["<leader>", "a"],
+      "commands": ["vscode-harpoon.addEditor"]
+    },
+    {
+      "before": ["<leader>", "-"],
+      "commands": ["vscode-harpoon.editEditors"]
+    },
+    {
+      "before": ["<leader>", "0"],
+      "commands": ["vscode-harpoon.editorQuickPick"]
+    },
+    {
+      "before": ["<leader>", "1"],
+      "commands": ["vscode-harpoon.gotoEditor1"]
+    },
+    {
+      "before": ["<leader>", "2"],
+      "commands": ["vscode-harpoon.gotoEditor2"]
+    },
+    {
+      "before": ["<leader>", "3"],
+      "commands": ["vscode-harpoon.gotoEditor3"]
+    },
+    {
+      "before": ["<leader>", "4"],
+      "commands": ["vscode-harpoon.gotoEditor4"]
+    },
+    {
+      "before": ["<leader>", "5"],
+      "commands": ["vscode-harpoon.gotoEditor5"]
+    },
+    {
+      "before": ["<leader>", "6"],
+      "commands": ["vscode-harpoon.gotoEditor6"]
+    },
+    {
+      "before": ["<leader>", "7"],
+      "commands": ["vscode-harpoon.gotoEditor7"]
+    },
+    {
+      "before": ["<leader>", "8"],
+      "commands": ["vscode-harpoon.gotoEditor8"]
+    },
+    {
+      "before": ["<leader>", "9"],
+      "commands": ["vscode-harpoon.gotoEditor9"]
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -116,5 +168,6 @@
   "vim.smartRelativeLine": true,
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
-  "workbench.colorTheme": "One Dark Pro"
+  "workbench.colorTheme": "One Dark Pro",
+  "window.zoomLevel": 2
 }
