@@ -1,0 +1,18 @@
+{
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "vimMode": true,
+  "attachmentFolderPath": "Attachments",
+  "showFrontmatter": true,
+  "showLineNumber": true,
+  "autoPairBrackets": false,
+  "autoPairMarkdown": true,
+  "strictLineBreaks": false,
+  "showInlineTitle": true,
+  "userIgnoreFilters": [
+    "Templates/"
+  ],
+  "livePreview": true,
+  "useTab": false,
+  "readableLineLength": false
+}
