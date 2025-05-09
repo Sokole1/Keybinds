@@ -1,92 +1,531 @@
 {
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.languageServer": "Default",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["k", "j"],
-            "after": ["<Esc>"]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-          {
-            "before": ["<leader>", "w"],
-            "commands": ["workbench.action.splitEditor"]
-          },
-          {
-            "before": ["<leader>", "h"],
-            "commands": ["workbench.action.focusPreviousGroup"]
-          },
-          {
-            "before": ["<leader>", "l"],
-            "commands": ["workbench.action.focusNextGroup"]
-          },
-          {
-            "before": ["<leader>", "q"],
-            "commands": ["workbench.action.closeOtherEditors"]
-          },                 {
-            "before": ["<leader>", "o"],
-            "commands": ["workbench.action.quickOpen"]
-          },       
-          {
-            "before": ["<leader>", "x"],
-            "commands": ["workbench.action.closeActiveEditor"]
-          },       
-          {
-           "before": ["leader", "s"],
-            "commands": [
-                "workbench.action.files.save",
-            ]
-        },
-        {
-          "before": ["<leader>", "t"],
-          "commands": ["workbench.action.toggleSidebarVisibility"]
-        },
-        {
-          "before": ["<leader>", "f"],
-          "after": ["<leader>", "<leader>", " ", "b", "d", "w"]
-        },
-        {
-          "before": ["<leader>", "j"],
-          "commands": ["workbench.action.navigateBack"]
-        },
-        {
-          "before": ["<leader>", "k"],
-          "commands": ["workbench.action.navigateForward"]
-        },
-        {
-          "before": ["<leader>", "p"],
-          "commands": ["workbench.action.showCommands"]
-        },
-      ],
-      "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "p",
-            ],
-            "after": [
-                "p",
-                "g",
-                "v",
-                "y"
-            ]
-        }
-    ],
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.easymotion": true,
-    "vim.leader": " ",
-    "[jsonc]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.languageServer": "Default",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.inlineSuggest.enabled": true,
+  "editor.tabCompletion": "on",
+  "emmet.triggerExpansionOnTab": true,
+  "editor.formatOnSave": true,
+  "rust-analyzer.hover.actions.references.enable": true,
+  "window.zoomLevel": -1,
+  "vim.showMarksInGutter": false,
+  "vim.foldfix": true,
+  "vim.useSystemClipboard": true,
+  "vim.surround": true,
+  "vim.hlsearch": true,
+  "vim.easymotion": true,
+  "vim.easymotionKeys": "asdghklqwertyuiopzxcvbnmfj",
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Leader>", "t", "t"],
+      "commands": [":tabnew"]
     },
-    "vim.smartRelativeLine": true,
-    "editor.lineNumbers": "relative",
+    // Get rid of highlights
+    {
+      "before": ["<Leader>", "\\"],
+      "commands": [":noh"]
+    },
+    {
+      "before": ["<Leader>", "t", "o"],
+      "commands": [":tabo"]
+    },
+    {
+      "before": [":", "w", "<CR>"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeWindow"],
+      "when": "workbench.action.closeWindow"
+    },
+
+    // FLASH.NVIM
+    {
+      // Flash
+      "before": ["s"],
+      "after": ["<leader>", "<leader>", "/"]
+    },
+    {
+      // Flash Treesitter
+      "before": ["S"],
+      "after": ["<leader>", "<leader>", "<leader>", "j"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    // GENERAL
+    {
+      // Go to left window
+      "before": ["<C-h>"],
+      "after": ["<C-W>", "h"]
+    },
+    {
+      // Go to lower window
+      "before": ["<C-j>"],
+      "after": ["<C-W>", "j"]
+    },
+    {
+      // Go to upper window
+      "before": ["<C-k>"],
+      "after": ["<C-W>", "k"]
+    },
+    {
+      // Go to right window
+      "before": ["<C-l>"],
+      "after": ["<C-W>", "l"]
+    },
+    {
+      // Increase window height
+      "before": ["<C-Up>"],
+      "commands": ["workbench.action.increaseViewHeight"]
+    },
+    {
+      // Decrease window height
+      "before": ["<C-Up>"],
+      "commands": ["workbench.action.decreaseViewHeight"]
+    },
+    {
+      // Decrease window width
+      "before": ["<C-left>"],
+      "commands": ["workbench.action.decreaseViewWidth"]
+    },
+    {
+      // Increase window width
+      "before": ["<C-Right>"],
+      "commands": ["workbench.action.increaseViewWidth"]
+    },
+    {
+      // Move down
+      "before": ["<A-j>"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      // Move up
+      "before": ["<A-k>"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    {
+      // Prev buffer
+      "before": ["<S-h>"],
+      "commands": [":bprev"]
+    },
+    {
+      // Next buffer
+      "before": ["<S-l>"],
+      "commands": [":bnext"]
+    },
+    {
+      // Prev buffer
+      "before": ["[", "b"],
+      "commands": [":bprev"]
+    },
+    {
+      // Next buffer
+      "before": ["]", "b"],
+      "commands": [":bnext"]
+    },
+    {
+      // Redraw / clear hlsearch / diff update
+      "before": ["<leader>", "u", "r"],
+      "commands": ["workbench.action.reloadWindow"]
+    },
+    {
+      "before": ["g", "w"],
+      "after": ["*"]
+    },
+    {
+      // Lazy
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.view.extensions"]
+    },
+    {
+      // New File
+      "before": ["<leader>", "f", "n"],
+      "commands": ["workbench.action.files.newUntitledFile"]
+    },
+    {
+      // Toggle Word Wrap
+      "before": ["<leader>", "u", "w"],
+      "commands": ["editor.action.toggleWordWrap"]
+    },
+    {
+      // Lazygit (root dir)
+      "before": ["<leader>", "g", "g"],
+      "commands": [
+        "workbench.action.createTerminalEditor",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": { "text": "lazygit && exit\n" }
+        }
+      ]
+    },
+    {
+      // Lazygit (cwd)
+      "before": ["<leader>", "g", "G"],
+      "commands": ["workbench.view.scm"],
+      "when": "workbench.scm.active"
+    },
+    {
+      // Quit all
+      "before": ["<leader>", "q", "q"],
+      "commands": ["workbench.action.quit"]
+    },
+    {
+      // LazyVim Changelog
+      "before": ["<leader>", "L"],
+      "commands": ["update.showCurrentReleaseNotes"]
+    },
+    {
+      // Terminal (root dir)
+      "before": ["<leader>", "f", "t"],
+      "commands": ["workbench.action.createTerminalEditor"],
+      "when": "terminal.active"
+    },
+    {
+      // Terminal (cwd)
+      "before": ["<leader>", "f", "T"],
+      "commands": ["workbench.action.createTerminalEditor"],
+      "when": "terminal.active"
+    },
+
+    // LSP
+    {
+      // Line Diagnostics
+      "before": ["<leader>", "c", "d"],
+      "commands": ["editor.action.showHover"],
+      "when": "workbench.panel.output.active"
+    },
+    {
+      // LSP info
+      "before": ["<leader>", "c", "l"],
+      "commands": ["workbench.action.output.toggleOutput"]
+    },
+    {
+      // Goto Definition
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      // References
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      // Goto Declaration
+      "before": ["g", "D"],
+      "commands": ["editor.action.revealDeclaration"]
+    },
+    {
+      // Goto Implementation
+      "before": ["g", "I"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      // Goto T[y]pe Definition
+      "before": ["g", "y"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      // Hover
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      // Signature Help
+      "before": ["g", "K"],
+      "commands": ["editor.action.triggerParameterHints"],
+      "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+      // Signature Help
+      "before": ["<C-k>"],
+      "commands": ["editor.action.triggerParameterHints"],
+      "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+      // Next Diagnostic
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"],
+      "when": "editorFocus"
+    },
+    {
+      // Prev Diagnostic
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"],
+      "when": "editorFocus"
+    },
+    {
+      // Next Error
+      "before": ["]", "e"],
+      "commands": ["editor.action.marker.next"],
+      "when": "editorFocus"
+    },
+    {
+      // Prev Error
+      "before": ["[", "e"],
+      "commands": ["editor.action.marker.prev"],
+      "when": "editorFocus"
+    },
+    {
+      // Next Warning
+      "before": ["]", "w"],
+      "commands": ["editor.action.marker.next"],
+      "when": "editorFocus"
+    },
+    {
+      // Prev Warning
+      "before": ["[", "w"],
+      "commands": ["editor.action.marker.prev"],
+      "when": "editorFocus"
+    },
+    {
+      // Format Document
+      "before": ["<leader>", "c", "f"],
+      "commands": ["editor.action.formatDocument"],
+      "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    // {
+    //   // Format Range
+    //   "before": ["<leader>", "c", "f"],
+    //   "commands": ["N/A - no VSCode equivalent"]
+    // },
+    {
+      // Code Action
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"],
+      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      // Source Action
+      "before": ["<leader>", "c", "A"],
+      "commands": ["editor.action.quickFix"],
+      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      // Rename
+      "before": ["<leader>", "c", "r"],
+      "commands": ["editor.action.rename"],
+      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+
+    // BUFFERLINE.NVIM
+    {
+      // Toggle pin
+      // NOTE: Separate commands required due to VSCode limitations
+      // pin
+      "before": ["<leader>", "b", "p"],
+      "commands": ["workbench.action.pinEditor"],
+      "when": "!activeEditorIsPinned"
+    },
+    {
+      // Toggle pin
+      // NOTE: Separate commands required due to VSCode limitations
+      // unpin
+      "before": ["<leader>", "b", "u"],
+      "commands": ["workbench.action.unpinEditor"],
+      "when": "activeEditorIsPinned"
+    },
+    {
+      // Delete non-pinned buffers
+      "before": ["<leader>", "b", "P"],
+      "commands": ["workbench.action.closeAllEditors"]
+    },
+    // NEO-TREE.NVIM
+    {
+      // Explorer NeoTree (root dir)
+      "before": ["<leader>", "fe"],
+      "commands": ["workbench.files.action.showActiveFileInExplorer"]
+    },
+    {
+      // Explorer NeoTree (cwd)
+      "before": ["<leader>", "fE"],
+      "commands": ["workbench.explorer.fileView.toggleVisibility"]
+    },
+    {
+      // Explorer NeoTree (root dir)
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.files.action.showActiveFileInExplorer"]
+    },
+    {
+      // Explorer NeoTree (cwd)
+      "before": ["<leader>", "E"],
+      "commands": ["workbench.explorer.fileView.toggleVisibility"]
+    },
+    {
+      // Noice Last Message
+      "before": ["<leader>", "s", "n", "l"],
+      "commands": ["workbench.action.output.toggleOutput"],
+      "when": "workbench.panel.output.active"
+    },
+    {
+      // Noice History
+      "before": ["<leader>", "s", "n", "h"],
+      "commands": ["workbench.action.output.toggleOutput"],
+      "when": "workbench.panel.output.active"
+    },
+    {
+      // Noice All
+      "before": ["<leader>", "s", "n", "a"],
+      "commands": ["workbench.action.output.toggleOutput"],
+      "when": "workbench.panel.output.active"
+    },
+
+    // NVIM-SPECTRE
+    {
+      // Replace in files (Spectre)
+      "before": ["<leader>", "s", "r"],
+      "commands": ["editor.action.startFindReplaceAction"],
+      "when": "editorFocus || editorIsOpen"
+    },
+
+    // TELESCOPE.NVIM
+    {
+      // Grep (root dir)
+      "before": ["<leader>", "/"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      // Find Files (root dir)
+      "before": ["<leader>", "<space>"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      // Buffers
+      "before": ["<leader>", "f", "b"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      // Find Files (root dir)
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      // Find Files (cwd)
+      "before": ["<leader>", "f", "F"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      // Recent
+      "before": ["<leader>", "f", "r"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      // Recent (cwd)
+      "before": ["<leader>", "f", "R"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      // commits
+      "before": ["<leader>", "g", "c"],
+      "commands": ["workbench.view.scm"],
+      "when": "workbench.scm.active"
+    },
+    {
+      // status
+      "before": ["<leader>", "g", "s"],
+      "commands": ["workbench.view.scm"],
+      "when": "workbench.scm.active"
+    },
+    {
+      // Buffer
+      "before": ["<leader>", "s", "b"],
+      "commands": ["editor.action.startFindReplaceAction"],
+      "when": "editorFocus || editorIsOpen"
+    },
+    {
+      // Commands
+      "before": ["<leader>", "s", "C"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      // Document diagnostics
+      "before": ["<leader>", "s", "d"],
+      "commands": ["workbench.actions.view.problems"],
+      "when": "workbench.panel.markers.view.active"
+    },
+    {
+      // Workspace diagnostics
+      "before": ["<leader>", "s", "D"],
+      "commands": ["workbench.actions.view.problems"],
+      "when": "workbench.panel.markers.view.active"
+    },
+    {
+      // Grep (root dir)
+      "before": ["<leader>", "s", "g"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      // Grep (cwd)
+      "before": ["<leader>", "s", "G"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      // Help Pages
+      "before": ["<leader>", "s", "h"],
+      "commands": ["workbench.action.openDocumentationUrl"]
+    },
+    {
+      // Key Maps
+      "before": ["<leader>", "s", "k"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      // Colorscheme with preview
+      "before": ["<leader>", "u", "C"],
+      "commands": ["workbench.action.selectTheme"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    },
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["k", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "editor.lineNumbers": "relative",
+  "mcp": {
+    "inputs": [],
+    "servers": {
+      "Context7": {
+        "type": "stdio",
+        "command": "npx",
+        "args": ["-y", "@upstash/context7-mcp@latest"]
+      }
+    }
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.agent.thinkingTool": true
 }
