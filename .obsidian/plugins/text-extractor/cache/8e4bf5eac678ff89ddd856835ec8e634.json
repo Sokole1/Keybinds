@@ -1,0 +1,1 @@
+{"path":".obsidian/plugins/text-extractor/cache/8e4bf5eac678ff89ddd856835ec8e634.json","text":"Noting that 18! = 18! x 24 =18! x (—4) x (=3) x (=2) x (=1) = 22! = —1mod 23 Thus we have 18! = —1mod 23 and 18! = —1mod 19. As 19 and 23 are relatively prime, by CRT, we get 18! = 436 mod 437. Hence he remainder is 436 when 18! is divided by 437.","libVersion":"0.2.1","langs":"eng"}

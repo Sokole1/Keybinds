@@ -1,0 +1,1 @@
+{"path":".obsidian/plugins/text-extractor/cache/15329ae9a7ade4fd68c1f3b3a6f9a471.json","text":"Def app: (app x y) (if (endp x) y (cons (car x) (app (cdr x) y))) Lemma 2. (app (cons a b) ¢) = (cons a (app b c)).","libVersion":"0.2.1","langs":"eng"}

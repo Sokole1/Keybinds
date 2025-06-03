@@ -12,7 +12,6 @@
   "recent-files-obsidian",
   "templater-obsidian",
   "obsidian-relative-line-numbers",
-  "obsidian-vimrc-support",
   "obsidian-git",
   "note-refactor-obsidian",
   "obsidian-focus-mode",
@@ -31,5 +30,6 @@
   "obsidian-minimal-settings",
   "obsidian-spaced-repetition",
   "buttons",
-  "copilot"
+  "copilot",
+  "obsidian-vimrc-support"
 ]

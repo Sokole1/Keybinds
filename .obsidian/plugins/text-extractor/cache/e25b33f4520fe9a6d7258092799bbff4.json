@@ -1,0 +1,1 @@
+{"path":".obsidian/plugins/text-extractor/cache/e25b33f4520fe9a6d7258092799bbff4.json","text":"Theorem 2.5.3 (Chain rule for relative entropy). D(p(x,y) Il q(x,y)) = D(p(x) Il q(x)) + D(p(y | x) Il q(y | x))","libVersion":"0.2.1","langs":"eng"}

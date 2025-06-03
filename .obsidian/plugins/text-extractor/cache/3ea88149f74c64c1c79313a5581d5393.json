@@ -1,0 +1,1 @@
+{"path":".obsidian/plugins/text-extractor/cache/3ea88149f74c64c1c79313a5581d5393.json","text":"(defthm inverse-squared-sums-bound (implies (and (integerp n) (<=1 n)) (<= (inverse-squared-sums n) (- 2 (/ n)))))","libVersion":"0.2.1","langs":"eng"}

@@ -1,0 +1,1 @@
+{"path":".obsidian/plugins/text-extractor/cache/633ddd3ded7d5a16c8c10ec59df401f7.json","text":"2. Using this inductive definition, write a recursive algorithm that computes ™ mod N. You can assume that multiplication and mod operations on n-bit numbers are available, that we can test if a number is even, and so on.","libVersion":"0.2.1","langs":"eng"}

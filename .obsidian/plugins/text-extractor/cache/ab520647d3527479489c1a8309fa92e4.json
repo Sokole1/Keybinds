@@ -1,0 +1,1 @@
+{"path":".obsidian/plugins/text-extractor/cache/ab520647d3527479489c1a8309fa92e4.json","text":"Question 3.2 If all row-sums are zero it means that a vector of all 1s, let us denote it by 1, gives us AT =0, and therefore there is a nontrivial solution of the homogeneous linear system Ax = 0, namely x = 1. Therefore A is singular.","libVersion":"0.2.1","langs":"eng"}

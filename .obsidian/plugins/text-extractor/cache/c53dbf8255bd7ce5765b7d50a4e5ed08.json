@@ -1,0 +1,1 @@
+{"path":".obsidian/plugins/text-extractor/cache/c53dbf8255bd7ce5765b7d50a4e5ed08.json","text":"3. Given two strings A and B of length n > 0 and m > 0, describe the length of the LCS LLCS(A[1..n], B[1..m]) as a recurrence over smaller instances. Use and generalize your work in the previous problems!","libVersion":"0.2.1","langs":"eng"}

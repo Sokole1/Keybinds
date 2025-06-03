@@ -1,0 +1,1 @@
+{"path":".obsidian/plugins/text-extractor/cache/cdf92eaaea246892766e245c4a3044d4.json","text":"If we changed line 25 to rrmovq %rdi, %rax, what would happen to the value in %rax at the end of the program? O It would get smaller. O It would be unchanged. O Itis impossible to tell. O It would get larger.","libVersion":"0.2.1","langs":"eng"}
